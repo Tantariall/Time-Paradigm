@@ -1,1 +1,1 @@
-alert('Is it working?')
+alert('SUKA RABOTAI TVAR')
