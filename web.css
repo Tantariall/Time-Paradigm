@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=”UTF-8?>
+<title>Use canvas in HTML/title>
+</head>
+<body>
+<canvas id=”canvas”></canvas>
+<script type=”text/JavaScript” src=”js/script.js”></script>
+</body>
+</html>
+<script>
+const canvas = document.getElementById(‘canvas’);
+const ctx = canvas.getContext(‘2d’);
+ctx.fillStyle = ‘#999’;
+ctx.fillRect(10, 10, 150, 100);
+</script>
