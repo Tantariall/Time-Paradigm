@@ -1,1 +1,1 @@
-ok
+alert('Is it working?')
