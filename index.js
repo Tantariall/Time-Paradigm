@@ -4,5 +4,6 @@ let GameData={
 }
 
 function MineGold(){
-  GameData.gold += GameData.powerOnClick
+  GameData.power += GameData.powerOnClick
+  document.getElementById("goldMined").innerHTML = gameData.power + " Gold Mined"
 }
