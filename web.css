@@ -1,6 +1,22 @@
-body{
-  background-color=red
-};
-head{
- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+.styled {
+  font-family: cursive;
+  font-size: 1rem;
+  background-color: rgba(220, 150, 220, 50);
+  border-radius: 5px;
+  line-height: 1.5;
+  padding: 0 20px;
+  color: black;
+  border-width: 2px;
+  border-color: darkviolet;
+}
+.styled:hover {
+  background-color: rgba(220, 200, 220, 50);
+  color: black;
+  text-shadow: 2px 2px 2px white;
+}
+.styled:active{
+  text-shadow: 2px 2px 2px lightgray;
+}
+.text_styled{
+  font-family: cursive;
 }
