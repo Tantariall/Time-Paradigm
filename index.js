@@ -3,7 +3,7 @@ let GameData={
   powerOnClick: 1
 }
 
-function MineGold(){
+function Gain(){
   GameData.power += GameData.powerOnClick
-  document.getElementById("goldMined").innerHTML = gameData.power + " Gold Mined"
+  document.getElementById("PowerGained").innerHTML = gameData.power + " Power"
 }
