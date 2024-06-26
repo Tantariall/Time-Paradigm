@@ -1,10 +1,10 @@
-let GameData={
+let display = document.getElementById("PowerGained");
+let GameData = {
   power: 0,
-  powerOnClick: 1
-}
+  powerOnClick: 1,
+};
 
-function Gain(){
-  GameData.power += GameData.powerOnClick
-  document.getElementById("PowerGained").innerHTML = gameData.power + " Power"
+function Gain() {
+  GameData.power += GameData.powerOnClick;
+  display.innerHTML =`You have ${GameData.power} Power`;
 }
-window.Gain=Gain
