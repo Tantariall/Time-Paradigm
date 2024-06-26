@@ -7,3 +7,4 @@ function Gain(){
   GameData.power += GameData.powerOnClick
   document.getElementById("PowerGained").innerHTML = gameData.power + " Power"
 }
+window.Gain=Gain
