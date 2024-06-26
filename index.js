@@ -3,6 +3,6 @@ let GameData={
   powerOnClick: 1
 }
 
-function mineGold(){
+function MineGold(){
   GameData.gold += GameData.powerOnClick
 }
