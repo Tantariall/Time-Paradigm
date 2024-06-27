@@ -28,7 +28,7 @@ async function Fight() {
 async function Train(){
   Actions.TrainingNow=1;
   Actions.FightingNow=0;
-  while (TrainingNow==1){
+  while (Actions.TrainingNow==1){
     GameData.powerPerSecond += (GameData.TrainingBoost);
     Display();
     await Delay(100);
