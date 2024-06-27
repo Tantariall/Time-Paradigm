@@ -3,8 +3,14 @@ let GameData = {
   power: 0,
   powerOnClick: 1,
 };
-
+function Display(){
+  display.innerHTML =`LV ${GameData.power}`;
+}
 function Gain() {
   GameData.power += GameData.powerOnClick;
-  display.innerHTML =`You have ${GameData.power} Power`;
+  Display()
+}
+function Reset(){
+  GameData.power = 0;
+  Display()
 }
