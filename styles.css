@@ -1,19 +1,17 @@
-button.styled {
-  font-family: cursive;
-  font-size: 1rem;
-  background-color: rgba(220, 150, 220, 50);
-  border-radius: 5px;
-  line-height: 1.5;
-  padding: 0 20px;
-  color: black;
-  border-width: 2px;
-  border-color: darkviolet;
+.styled{
+  padding: 0px 10px;
+  text-align: right;
+  font-family: sans;
+  border: solid black;
+  font-size: 1.5rem;
+  background-color: black;
+  color: rgb(150, 100, 50);
+  border: solid rgb(150, 100, 50);
 }
-button.styled:hover {
-  background-color: rgba(220, 200, 220, 50);
-  color: black;
-  text-shadow: 2px 2px 2px white;
+.styled:hover{
+  border: solid yellow;
+  color: yellow;
 }
-button.styled:active{
-  text-shadow: 2px 2px 2px lightgray;
+.text_styled:hover{
+  color: darkred;
 }
