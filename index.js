@@ -6,12 +6,12 @@ let Actions = {
   FightingNow: 0,
   TravellingNow: 0,
   TrainingNow: 0,
-  MeditatingNow: 0
+  MeditatingNow: 0,
 }
 let GameData = {
   power: 0,
   powerPerSecond: 1,
-  TrainingBoost: 1
+  TrainingBoost: 1,
 };
 function Display(){
   display.innerHTML =`Level ${GameData.power.toFixed(2)}, Fight Efficiency ${GameData.powerPerSecond.toFixed(2)}`;
