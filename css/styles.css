@@ -5,8 +5,8 @@
   border: solid black;
   font-size: 1.5rem;
   background-color: black;
-  color: rgb(150, 100, 50);
-  border: solid rgb(150, 100, 50);
+  color: rgb(255, 164, 74);
+  border: solid rgb(255, 164, 74);
 }
 .styled:hover{
   border: solid yellow;
