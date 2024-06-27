@@ -14,7 +14,7 @@ let GameData = {
   TrainingBoost: 1
 };
 function Display(){
-  display.innerHTML =`LV ${GameData.power}`;
+  display.innerHTML =`Level ${GameData.power.toFixed(2)}, Fight Efficiency ${GameData.powerPerSecond.toFixed(2)}`;
 }
 async function Fight() {
   Actions.FightingNow=1;
