@@ -1,1 +1,1 @@
-An RPG/Incremental game inspired by other incrementals.
+An RPG/Incremental game.
