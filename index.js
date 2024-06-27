@@ -1,16 +1,36 @@
+function Delay(time){
+   return new Promise(resolve => setTimeout(resolve, time));
+}
 let display = document.getElementById("PowerGained");
+let Actions = {
+  FightingNow: 0,
+  TravellingNow: 0,
+  TrainingNow: 0,
+  MeditatingNow: 0
+}
 let GameData = {
   power: 0,
-  powerOnClick: 1,
+  powerPerSecond: 1,
+  TrainingBoost: 1
 };
 function Display(){
   display.innerHTML =`LV ${GameData.power}`;
 }
-function Gain() {
-  GameData.power += GameData.powerOnClick;
-  Display()
+async function Fight() {
+  Actions.FightingNow=1;
+  Actions.TrainingNow=0;
+  while (Actions.FightingNow==1){
+    GameData.power += (GameData.powerPerSecond/10);
+    Display();
+    await Delay(100);
+  }
 }
-function Reset(){
-  GameData.power = 0;
-  Display()
+async function Train(){
+  Actions.TrainingNow=1;
+  Actions.FightingNow=0;
+  while (TrainingNow==1){
+    GameData.powerPerSecond += (GameData.TrainBoost/100);
+    Display();
+    await Delay(100);
+  }
 }
