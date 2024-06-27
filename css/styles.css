@@ -1,8 +1,9 @@
 .styled{
   padding: 0px 10px;
+  position: absolute;
+  left: 50%;
   text-align: right;
   font-family: sans;
-  border: solid black;
   font-size: 1.5rem;
   background-color: black;
   color: rgb(255, 164, 74);
