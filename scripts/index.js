@@ -34,6 +34,7 @@ async function Act(x){
    }
    Display()
    delay(10)
+}
 function Display(){
   display.innerHTML =`Your Power is ${GameData.power.toFixed(2)}, Fight Efficiency ${GameData.powerPerSecond.toFixed(2)}`;
 }
