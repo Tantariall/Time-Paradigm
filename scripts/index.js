@@ -49,3 +49,4 @@ async function Fight(){
       Display();
       await Delay(10);
    }
+}
