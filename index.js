@@ -1,4 +1,4 @@
-function Delay(time){
+function delay(time){
    return new Promise(resolve => setTimeout(resolve, time));
 }
 function ResetActions(){
