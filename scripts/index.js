@@ -33,7 +33,7 @@ async function Eternal_Act(){
    else if (Actions=='Train'){
       Train();
    }
-   else if (Action=="Nothing"){
+   else if (Actions=="Nothing"){
       //NOTHING;
    }
    Display()
