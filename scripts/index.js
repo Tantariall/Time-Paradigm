@@ -1,21 +1,8 @@
 function Delay(time){
    return new Promise(resolve => setTimeout(resolve, time));
 };
-function ResetActions(){
-   Actions = {
-  FightingNow: 0,
-  TravellingNow: 0,
-  TrainingNow: 0,
-  MeditatingNow: 0,
-   }
-};
 let display = document.getElementById("Stats");
-let Actions = {
-  FightingNow: 0,
-  TravellingNow: 0,
-  TrainingNow: 0,
-  MeditatingNow: 0,
-}
+let Actions = "Nothing"
 let Player = {
    Power: 0,
    Gold: 0,
@@ -24,44 +11,36 @@ let Player = {
 function Display(){
   display.innerHTML =`Your Power is ${Player.Power.toFixed(2)}, Gold ${Player.Gold.toFixed(2)}, Distance ${Player.Distance.toFixed(2)}`;
 };
-function Act(x){
-   ResetActions()
-   Delay (2000)
-   if (x==1){
-      Actions.TravellingNow=1;
+async function Act(x){
+   switch(x){
+      case 1:
+         Actions = "Travel"
+      case 2:
+         Actions = "Fight"
+      case 3:
+         Actions = "Train"
+      case 0:
+         Actions = "Nothing"
+   }
+}
+async function Eternal_Act(){
+   if (Actions=='Travel'){
       Travel();
-   }
-   else if (x==2){
-      Actions.FightingNow=1;
+   };
+   else if (Actions=='Fight'){
       Fight();
-   }
-   else if (x==3){
-      Actions.TrainingNow=1;
+   };
+   else if (Actions=='Train'){
       Train();
+   };
+   else if (Action=="Nothing"){
+      //NOTHING;
    }
-   else{
-      //Do Nothing
-   }
+   Display()
+   await Delay(10)
+}
+function Fight(){
+   Player.Gold += 0.01+(Player.Distance**0.3)
+   Player.Power += Player.Distance**0.2
 };
-async function Fight(){
-   while (Actions.FightingNow==1){
-      Player.Gold += 0.01+(Math.log10(Player.Distance+1));
-      Player.Power += 0.01+(Math.log2(Player.Distance+1))/10;
-      Display();
-      await Delay(10);
-   }
-}
-async function Train(){
-   while (Actions.TrainingNow==1){
-      Player.Power += 1;
-      Display();
-      await Delay(10);
-   }
-}
-async function Travel(){
-   while (Actions.TravellingNow==1){
-      Player.Distance += ((Player.Power**1.05)-Player.Distance)/500;
-      Display();
-      await Delay(10);
-   }
-}
+Eternal_Act()
