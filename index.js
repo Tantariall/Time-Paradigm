@@ -21,24 +21,25 @@ let GameData = {
   powerPerSecond: 1,
   TrainingBoost: 1,
 };
+async function Act(x){
+   switch (x){
+      case 1:
+         //Travel;
+      case 2:
+         Fight();
+      case 3:
+         Train();
+      case 4:
+         //Meditate;
+   }
+   display()
+   delay(10)
 function Display(){
   display.innerHTML =`Your Power is ${GameData.power.toFixed(2)}, Fight Efficiency ${GameData.powerPerSecond.toFixed(2)}`;
 }
-async function Fight() {
-  ResetActions()
-  Actions.FightingNow=1;
-  while (Actions.FightingNow==1){
-    GameData.power += (GameData.powerPerSecond/100);
-    Display();
-    await Delay(10);
-  }
+function Fight() {
+   GameData.power += (GameData.powerPerSecond/100);
 }
-async function Train(){
-  ResetActions()
-  Actions.TrainingNow=1;
-  while (Actions.TrainingNow==1){
-    GameData.powerPerSecond += (GameData.TrainingBoost/1000);
-    Display();
-    await Delay(10);
-  }
+function Train(){
+   GameData.powerPerSecond += (GameData.TrainingBoost/1000);
 }
