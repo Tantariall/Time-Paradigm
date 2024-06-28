@@ -9,31 +9,27 @@
   border-radius: 5px;
   box-shadow: 0px 0px 5px #ffffff;
   cursor: pointer;
+  transition: 0.25s;
 }
 .styled:hover{
   border: 2px solid white;
   color: white;
   box-shadow: 0px 0px 10px;
   text-shadow: 0px 2px 3px gray;
+  scale: 1.05
 }
 .styled:active{
   box-shadow: 0px 0px 10px #bababa;
   color: black;
   background-color: white;
   text-shadow: 0px 3px 3px black;
-}
-.styled:focus{
-  cursor: default;
-  box-shadow: 0px 0px 10px #bababa;
-  border: white;
-  color: black;
-  background-color: white;
-  text-shadow: 0px 3px 3px black;
+  scale: 1.1;
 }
 .text_styled:hover{
   box-shadow: 0px 0px 5px white;
   text-shadow: 0px 0px 5px #aaaaaa;
   cursor: default;
+  transition: 0.25s;
 }
 .text_styled{
   color: white;
@@ -41,4 +37,5 @@
   position:absolute;
   width: 300px;
   text-align: center;
+  transition: 0.25s;
 }
