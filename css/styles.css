@@ -4,16 +4,28 @@
   font-family: sans;
   font-size: 1.5rem;
   background-color: black;
-  color: rgb(255, 164, 74);
-  border: solid rgb(255, 164, 74);
+  color: rgb(255 255 255);
+  border: 2px solid rgb(0 0 0);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #ffffff;
 }
 .styled:hover{
-  border: solid yellow;
-  color: yellow;
+  border: 2px solid white;
+  color: white;
+  box-shadow: 0px 0px 10px;
+  text-shadow: 0px 2px 3px gray;
+}
+.styled:active{
+  box-shadow: 0px 0px 10px #bababa;
+  color: black;
+  background-color: white;
+  text-shadow: 0px 3px 3px black;
+}
+.styled:focus{
 }
 .text_styled:hover{
-  color: yellow;
-  border:double #343400;
+  box-shadow: 0px 0px 5px white;
+  text-shadow: 0px 0px 5px #aaaaaa;
 }
 .text_styled{
   color: white;
