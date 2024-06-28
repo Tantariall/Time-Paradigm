@@ -12,15 +12,14 @@ function Display(){
   display.innerHTML =`Your Power is ${Actions}, Gold ${Player.Gold.toFixed(2)}, Distance ${Player.Distance.toFixed(2)}`;
 };
 async function Act(x){
-   switch(x){
-      case 1:
-         Actions = "Travel"
-      case 2:
-         Actions = "Fight"
-      case 3:
-         Actions = "Train"
-      case 0:
-         Actions = "Nothing"
+   if (x==1){
+      Actions = "Travel"
+   } else if (x==2){
+      Actions = "Fight"
+   } else if (x==3){
+      Actions = "Train"
+   } else if (x==0){
+      Actions = "Nothing"
    }
 }
 async function Eternal_Act(){
