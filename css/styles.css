@@ -12,5 +12,8 @@
   color: yellow;
 }
 .text_styled:hover{
-  color: darkred;
+  color: yellow;
+}
+.text_styled{
+  color: white;
 }
