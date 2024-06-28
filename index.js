@@ -32,7 +32,7 @@ async function Act(x){
       case 4:
          //Meditate;
    }
-   display()
+   Display()
    delay(10)
 function Display(){
   display.innerHTML =`Your Power is ${GameData.power.toFixed(2)}, Fight Efficiency ${GameData.powerPerSecond.toFixed(2)}`;
@@ -42,5 +42,4 @@ function Fight() {
 }
 function Train(){
    GameData.powerPerSecond += (GameData.TrainingBoost/1000);
-}
- 
+}   
