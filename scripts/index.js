@@ -28,7 +28,7 @@ function Act(x){
    ResetActions()
    if (x==1){
       Actions.TravellingNow=1;
-      //Travel();
+      Travel();
    }
    else if (x==2){
       Actions.FightingNow=1;
@@ -59,7 +59,7 @@ async function Train(){
 }
 async function Travel(){
    while (Actions.TravellingNow==1){
-      Player.Distance += (Player.Power-Player.Distance)/10;
+      Player.Distance += ((Player.Power**1.05)-Player.Distance)/500;
       Display();
       await Delay(10);
    }
