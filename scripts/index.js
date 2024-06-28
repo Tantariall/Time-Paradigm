@@ -44,8 +44,8 @@ function Act(x){
 };
 async function Fight(){
    while (Actions.FightingNow==1){
-      Player.Gold += 0.01+(Math.log10(Player.Distance));
-      Player.Power += 0.01+(Math.log2(Player.Distance));
+      Player.Gold += 0.01+(Math.log10(Player.Distance+1));
+      Player.Power += 0.01+(Math.log2(Player.Distance+1))/10;
       Display();
       await Delay(10);
    }
