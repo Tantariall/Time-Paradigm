@@ -41,7 +41,13 @@ async function Eternal_Act(){
    }
 }
 function Fight(){
-   Player.Gold += 0.01+(Player.Distance**0.3)
-   Player.Power += Player.Distance**0.2
+   Player.Gold += (1+(Player.Distance**0.3))/100;
+   Player.Power += (Player.Distance**0.2)/10;
+};
+function Train(){
+   Player.Power += 0.05;
+};
+function Travel(){
+   Player.Distance += Player.Power/Player.Distance/10
 };
 Eternal_Act()
