@@ -13,7 +13,12 @@
 }
 .text_styled:hover{
   color: yellow;
+  border:double #343400;
 }
 .text_styled{
   color: white;
+  border:double gray;
+  position:absolute;
+  width: 300px;
+  text-align: center;
 }
