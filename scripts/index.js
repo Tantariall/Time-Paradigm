@@ -26,13 +26,13 @@ async function Act(x){
 async function Eternal_Act(){
    if (Actions=='Travel'){
       Travel();
-   };
+   }
    else if (Actions=='Fight'){
       Fight();
-   };
+   }
    else if (Actions=='Train'){
       Train();
-   };
+   }
    else if (Action=="Nothing"){
       //NOTHING;
    }
