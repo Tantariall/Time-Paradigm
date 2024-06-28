@@ -9,7 +9,7 @@ let Player = {
    Distance: 1,
 };
 function Display(){
-  display.innerHTML =`Your Power is ${Actions}, Gold ${Player.Gold.toFixed(2)}, Distance ${Player.Distance.toFixed(2)}`;
+  display.innerHTML =`Your Power is ${Player.Power.toFixed(2)}, Gold ${Player.Gold.toFixed(2)}, Distance ${Player.Distance.toFixed(2)}`;
 };
 async function Act(x){
    if (x==1){
