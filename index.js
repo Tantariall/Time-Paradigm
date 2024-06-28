@@ -43,3 +43,4 @@ function Fight() {
 function Train(){
    GameData.powerPerSecond += (GameData.TrainingBoost/1000);
 }
+ 
