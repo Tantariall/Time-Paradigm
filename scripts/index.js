@@ -26,6 +26,7 @@ function Display(){
 };
 function Act(x){
    ResetActions()
+   Delay (2000)
    if (x==1){
       Actions.TravellingNow=1;
       Do().Travel();
@@ -42,27 +43,25 @@ function Act(x){
       //Do Nothing
    }
 };
-function Do(){
-   async function Fight(){
-      while (Actions.FightingNow==1){
-         Player.Gold += 0.01+(Math.log10(Player.Distance+1));
-         Player.Power += 0.01+(Math.log2(Player.Distance+1))/10;
-         Display();
-         await Delay(10);
-      }
+async function Fight(){
+   while (Actions.FightingNow==1){
+      Player.Gold += 0.01+(Math.log10(Player.Distance+1));
+      Player.Power += 0.01+(Math.log2(Player.Distance+1))/10;
+      Display();
+      await Delay(10);
    }
-   async function Train(){
-      while (Actions.TrainingNow==1){
-         Player.Power += 1;
-         Display();
-         await Delay(10);
-      }
+}
+async function Train(){
+   while (Actions.TrainingNow==1){
+      Player.Power += 1;
+      Display();
+      await Delay(10);
    }
-   async function Travel(){
-      while (Actions.TravellingNow==1){
-         Player.Distance += ((Player.Power**1.05)-Player.Distance)/500;
-         Display();
-         await Delay(10);
-      }
+}
+async function Travel(){
+   while (Actions.TravellingNow==1){
+      Player.Distance += ((Player.Power**1.05)-Player.Distance)/500;
+      Display();
+      await Delay(10);
    }
 }
