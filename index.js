@@ -22,23 +22,23 @@ let GameData = {
   TrainingBoost: 1,
 };
 function Display(){
-  display.innerHTML =`Level ${GameData.power.toFixed(2)}, Fight Efficiency ${GameData.powerPerSecond.toFixed(2)}`;
+  display.innerHTML =`Your Power is ${GameData.power.toFixed(2)}, Fight Efficiency ${GameData.powerPerSecond.toFixed(2)}`;
 }
 async function Fight() {
   ResetActions()
   Actions.FightingNow=1;
   while (Actions.FightingNow==1){
-    GameData.power += (GameData.powerPerSecond/10);
+    GameData.power += (GameData.powerPerSecond/100);
     Display();
-    await Delay(100);
+    await Delay(10);
   }
 }
 async function Train(){
   ResetActions()
   Actions.TrainingNow=1;
   while (Actions.TrainingNow==1){
-    GameData.powerPerSecond += (GameData.TrainingBoost);
+    GameData.powerPerSecond += (GameData.TrainingBoost/1000);
     Display();
-    await Delay(100);
+    await Delay(10);
   }
 }
