@@ -9,7 +9,7 @@ function ResetActions(){
   MeditatingNow: 0,
    }
 }
-let display = document.getElementById("PowerGained");
+let display = document.getElementById("Stats");
 let Actions = {
   FightingNow: 0,
   TravellingNow: 0,
@@ -22,7 +22,7 @@ let Player = {
    Distance: 0,
 };
 function Display(){
-  display.innerHTML =`Your Power is ${GameData.power.toFixed(2)}, Fight Efficiency ${GameData.powerPerSecond.toFixed(2)}`;
+  display.innerHTML =`Your Power is ${Player.Power.toFixed(2)}, Gold ${Player.Gold.toFixed(2)}, Distance ${Player.Distance.toFixed(2)}`;
 }
 function Act(x){
    ResetActions()
@@ -41,9 +41,11 @@ function Act(x){
    else{
       //Do Nothing
    }
+}
 async function Fight(){
    while (Actions.FightingNow==1){
       Player.Gold += 0.01+(math.log10(Player.Distance));
       Player.Power += 0.01+(math.log2(Player.Distance));
       Display();
       await Delay(10);
+   }
