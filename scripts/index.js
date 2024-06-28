@@ -50,3 +50,17 @@ async function Fight(){
       await Delay(10);
    }
 }
+async function Train(){
+   while (Actions.TrainingNow==1){
+      Player.Power += 1;
+      Display();
+      await Delay(10);
+   }
+}
+async function Travel(){
+   while (Actions.TravellingNow==1){
+      Player.Distance += (Player.Power-Player.Distance)/10;
+      Display();
+      await Delay(10);
+   }
+}
