@@ -5,8 +5,8 @@ let display = document.getElementById("Stats");
 let Actions = "Nothing"
 let Player = {
    Power: 0,
-   Gold: 0,
-   Distance: 0,
+   Gold: 100,
+   Distance: 1,
 };
 function Display(){
   display.innerHTML =`Your Power is ${Player.Power.toFixed(2)}, Gold ${Player.Gold.toFixed(2)}, Distance ${Player.Distance.toFixed(2)}`;
@@ -24,6 +24,7 @@ async function Act(x){
    }
 }
 async function Eternal_Act(){
+   while (1>0){
    if (Actions=='Travel'){
       Travel();
    }
@@ -38,6 +39,7 @@ async function Eternal_Act(){
    }
    Display()
    await Delay(10)
+   }
 }
 function Fight(){
    Player.Gold += 0.01+(Player.Distance**0.3)
