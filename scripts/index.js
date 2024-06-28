@@ -29,18 +29,18 @@ function Act(x){
    if (x==1){
       Actions.TravellingNow=1;
       //Travel();
-   };
+   }
    else if (x==2){
       Actions.FightingNow=1;
       Fight();
-   };
+   }
    else if (x==3){
       Actions.TrainingNow=1;
       Train();
-   };
+   }
    else{
       //Do Nothing
-   };
+   }
 };
 async function Fight(){
    while (Actions.FightingNow==1){
