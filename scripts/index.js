@@ -1,3 +1,12 @@
+const buttons = document.querySelectorAll('.button');
+function ButtonChoice(){
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    buttons.forEach(button => button.classList.remove('enabled'));
+    button.classList.add('enabled');
+    });
+}
+});
 function Delay(time){
    return new Promise(resolve => setTimeout(resolve, time));
 };
@@ -37,6 +46,7 @@ async function Eternal_Act(){
       //NOTHING;
    }
    Display()
+   ButtonChoice()
    await Delay(10)
    }
 }
