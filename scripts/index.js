@@ -6,7 +6,7 @@ buttons.forEach(button => {
     button.classList.add('enabled');
     });
 }
-});
+)};
 function Delay(time){
    return new Promise(resolve => setTimeout(resolve, time));
 };
