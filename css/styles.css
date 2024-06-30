@@ -6,42 +6,23 @@
   background-color: black;
   color: rgb(255 255 255);
   border: 2px solid rgb(0 0 0);
-  border-radius: 5px;
   box-shadow: 0px 0px 5px #ffffff;
   cursor: pointer;
   transition: 0.25s;
 }
-.enabled{
-  padding: 0px 10px;
-  text-align: right;
-  font-family: sans;
-  font-size: 1.5rem;
-  background-color: white;
-  color: rgb(0 0 0);
-  border: 2px solid rgb(0 0 0);
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px #ffffff;
-  cursor: default;
-  transition: 0.25s;
-}
-.enabled:hover{
-  box-shadow: 0px 0px 0px #ffffff;
-  text-shadow: 0px 0px 5px #000000;
-  border: 2px solid #ffffff;
-}
 .styled:hover{
   border: 2px solid white;
-  color: white;
-  box-shadow: 0px 0px 10px;
-  text-shadow: 0px 2px 3px gray;
-  scale: 1.05
+  box-shadow: 0px 0px 10px white;
 }
-.styled:active{
-  box-shadow: 0px 0px 10px #bababa;
-  color: black;
+.styled:active,
+.active {
+  cursor: default;
   background-color: white;
-  text-shadow: 0px 3px 3px black;
-  scale: 1.1;
+  color: black;
+  border: 2px solid white;
+}
+.active:hover{
+  border: 2px solid black;
 }
 .text_styled:hover{
   box-shadow: 0px 0px 5px white;
