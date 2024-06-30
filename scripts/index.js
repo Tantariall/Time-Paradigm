@@ -1,12 +1,10 @@
 const buttons = document.querySelectorAll('.styled');
-function ButtonChoice(){
 buttons.forEach(button => {
   button.addEventListener('click', () => {
     buttons.forEach(button => button.classList.remove('active'));
     button.classList.add('active');
     });
-}
-)};
+});
 function Delay(time){
    return new Promise(resolve => setTimeout(resolve, time));
 };
@@ -46,7 +44,6 @@ async function Eternal_Act(){
       //NOTHING;
    }
    Display()
-   ButtonChoice()
    await Delay(10)
    }
 }
