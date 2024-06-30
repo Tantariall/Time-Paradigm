@@ -1,9 +1,9 @@
-const buttons = document.querySelectorAll('.button');
+const buttons = document.querySelectorAll('.styled');
 function ButtonChoice(){
 buttons.forEach(button => {
   button.addEventListener('click', () => {
-    buttons.forEach(button => button.classList.remove('enabled'));
-    button.classList.add('enabled');
+    buttons.forEach(button => button.classList.remove('active'));
+    button.classList.add('active');
     });
 }
 )};
