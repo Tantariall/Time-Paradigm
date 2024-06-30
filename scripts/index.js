@@ -48,6 +48,6 @@ function Train(){
    Player.Power += 0.05;
 };
 function Travel(){
-   Player.Distance += Player.Power/Player.Distance/10
+   Player.Distance += Player.Power/Player.Distance/50
 };
 Eternal_Act()
