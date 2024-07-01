@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/break_infinity.js@2"></script>
     <title>Time Paradigm</title>
     <link
       rel="shortcut icon"
@@ -13,32 +14,58 @@
   </head>
   <body style="background-color: black">
     <button
-      class="styled"
+      class="styled + unselectable"
       style="
       position: absolute;
-      left: 8%;
-      top: 20%
+      left: 40%;
+      top: 80%;
       "
       onclick="Act(2)">FIGHT
     </button>
     <button
-      class="styled"
+      class="styled + unselectable"
       style="
       position:absolute;
-      left: 8%;
-      top: 27%;
+      left: 47%;
+      top: 80%;
       "
       onClick="Act(3)">TRAIN</button>
     <button
-      class="styled"
+      class="styled + unselectable"
       style="
       position:absolute;
-      left: 8%;
-      top: 34%;
+      left: 54%;
+      top: 80%;
       "
       onClick="Act(1)">TRAVEL</button>
-    <div class="text_styled">
-    <p id="Stats">Start doing something!
+    <div class="text_styled + unselectable" style="
+    width: 350px;
+    left: 50%;
+    top: 30%;
+    margin-left: -175px;
+    font-size: 2rem;
+    ">
+    <p>You have <span id="Power" style="font-size: 3rem; text-shadow: 0px 0px 10px red, 0px 0px 5px red, 0px 0px 30px red">0</span> Power.
+    </p>
+    </div>
+    <div class="text_styled + unselectable" style="
+    width: 300px;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    font-size: 2rem;
+    ">
+    <p>You have <span id="Gold" style="font-size: 3rem;text-shadow: 0px 0px 10px rgb(255, 174, 0), 0px 0px 5px yellow, 0px 0px 30px red">0</span> gold.
+    </p>
+    </div>
+    <div class="text_styled + unselectable" style="
+    width: 500px;
+    left: 50%;
+    top: 0%;
+    margin-left: -250px;
+    font-size: 2rem;
+    ">
+    <p>You have traveled <span id="Distance" style="font-size: 3rem; text-shadow: 0px 0px 10px rgb(0, 107, 0), 0px 0px 5px rgb(0, 107, 0), 0px 0px 20px rgb(0, 107, 0)">0</span> Kilometers.
     </p>
     </div>
     <script src="scripts/index.js"></script>

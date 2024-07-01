@@ -2,7 +2,7 @@
   padding: 0px 10px;
   text-align: right;
   font-family: sans;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   background-color: black;
   color: rgb(255 255 255);
   border: 2px solid rgb(0 0 0);
@@ -12,7 +12,7 @@
 }
 .styled:hover{
   border: 2px solid white;
-  box-shadow: 0px 0px 10px white;
+  box-shadow: 0px 0px 10px white, inset 0px 0px 10px white;
 }
 .styled:active,
 .active {
@@ -22,19 +22,30 @@
   border: 2px solid white;
 }
 .active:hover{
-  border: 2px solid black;
+  border: 2px solid rgb(39, 39, 39);
+  box-shadow: inset 0px 0px 10px rgb(0, 0, 0);
 }
 .text_styled:hover{
-  box-shadow: 0px 0px 5px white;
-  text-shadow: 0px 0px 5px #aaaaaa;
+  border-radius: 30%/10%;
+  border: 2px double rgb(255, 255, 255);
+  border-top: 2px double rgb(0, 0, 0);
+  border-bottom: 2px dashed rgb(0, 0, 0);
   cursor: default;
   transition: 0.25s;
 }
 .text_styled{
-  color: white;
-  border:double gray;
   position:absolute;
-  width: 300px;
   text-align: center;
   transition: 0.25s;
+  border: 2px solid black;
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 0px 20px white, 0px 0px 10px white, 0px 0px 5px white;
+}
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

@@ -8,15 +8,21 @@ buttons.forEach(button => {
 function Delay(time){
    return new Promise(resolve => setTimeout(resolve, time));
 };
-let display = document.getElementById("Stats");
+let display = {
+   PowerDisplay: document.getElementById("Power"),
+   DistanceDisplay: document.getElementById("Distance"),
+   GoldDisplay: document.getElementById("Gold")
+}
 let Actions = "Nothing"
 let Player = {
    Power: 0,
-   Gold: 100,
-   Distance: 1,
+   Gold: 0,
+   Distance: 0,
 };
 function Display(){
-  display.innerHTML =`Your Power is ${Player.Power.toFixed(2)}, Gold ${Player.Gold.toFixed(2)}, Distance ${Player.Distance.toFixed(2)}`;
+  display.PowerDisplay.innerHTML = Player.Power.toFixed(2);
+  display.DistanceDisplay.innerHTML = Player.Distance.toFixed(2);
+  display.GoldDisplay.innerHTML = Player.Gold.toFixed(0);
 };
 async function Act(x){
    if (x==1){
@@ -48,13 +54,12 @@ async function Eternal_Act(){
    }
 }
 function Fight(){
-   Player.Gold += (1+(Player.Distance**0.3))/100;
-   Player.Power += (Player.Distance**0.2)/10;
+   Player.Gold += 0.1;
 };
 function Train(){
-   Player.Power += 0.05;
+   Player.Power += 0.0005
 };
 function Travel(){
-   Player.Distance += Player.Power/Player.Distance/50
+   Player.Distance += 0.001
 };
 Eternal_Act()
